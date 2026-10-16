@@ -47,6 +47,8 @@
     <ctl name="Voip Dtx Mode" value="0" />
     <ctl name="TTY Mode" value="OFF" />
     <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia1" value="0" />
+    <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia2" value="0" />
+    <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia3" value="0" />
     <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia4" value="0" />
     <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia5" value="0" />
     <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia7" value="0" />
@@ -3310,11 +3312,15 @@
     </path>
 
     <path name="speaker-mono-2">
-        <path name="speaker" />
+        <ctl name="TFA_CHIP_SELECTOR" value="2" />
+        <ctl name="stereo Profile" value="speaker" />
+        <ctl name="TFA_CHECK_FEEDBACK" value="On" />
     </path>
 
     <path name="speaker-mono">
-        <path name="speaker" />
+        <ctl name="TFA_CHIP_SELECTOR" value="2" />
+        <ctl name="stereo Profile" value="speaker" />
+        <ctl name="TFA_CHECK_FEEDBACK" value="On" />
     </path>
 
    <path name="speaker-vbat-mono">
@@ -3406,15 +3412,19 @@
     </path>
 
     <path name="voice-speaker-protected">
-        <path name="speaker-mono" />
+        <ctl name="TFA_CHIP_SELECTOR" value="2" />
+        <ctl name="stereo Profile" value="speaker" />
+        <ctl name="TFA_CHECK_FEEDBACK" value="On" />
     </path>
 
     <path name="voice-speaker-2-protected">
-        <path name="speaker-mono-2" />
+        <ctl name="TFA_CHIP_SELECTOR" value="2" />
+        <ctl name="stereo Profile" value="speaker" />
+        <ctl name="TFA_CHECK_FEEDBACK" value="On" />
     </path>
 
     <path name="voice-speaker-stereo-protected">
-        <path name="speaker-protected" />
+        <path name="voice-speaker-protected" />
     </path>
 
     <path name="speaker-protected-vbat">
@@ -3422,7 +3432,7 @@
     </path>
 
     <path name="voice-speaker-stereo-protected-vbat">
-        <path name="speaker-protected-vbat" />
+        <path name="voice-speaker-protected-vbat" />
     </path>
 
     <path name="voice-speaker-protected-vbat">
@@ -3585,19 +3595,27 @@
     </path>
 
     <path name="voice-speaker">
-        <path name="speaker-mono" />
+        <ctl name="TFA_CHIP_SELECTOR" value="2" />
+        <ctl name="stereo Profile" value="speaker" />
+        <ctl name="TFA_CHECK_FEEDBACK" value="On" />
     </path>
 
     <path name="voice-speaker-stereo">
-        <path name="speaker" />
+        <ctl name="TFA_CHIP_SELECTOR" value="2" />
+        <ctl name="stereo Profile" value="speaker" />
+        <ctl name="TFA_CHECK_FEEDBACK" value="On" />
     </path>
 
     <path name="voice-speaker-2">
-        <path name="speaker-mono-2" />
+        <ctl name="TFA_CHIP_SELECTOR" value="2" />
+        <ctl name="stereo Profile" value="speaker" />
+        <ctl name="TFA_CHECK_FEEDBACK" value="On" />
     </path>
 
     <path name="voice-speaker-hdk">
-        <path name="speaker-mono" />
+        <ctl name="TFA_CHIP_SELECTOR" value="2" />
+        <ctl name="stereo Profile" value="speaker" />
+        <ctl name="TFA_CHECK_FEEDBACK" value="On" />
     </path>
 
     <path name="voice-speaker-fluid">
@@ -3605,15 +3623,21 @@
     </path>
 
     <path name="voice-speaker-vbat">
-        <path name="speaker-vbat-mono" />
+        <ctl name="TFA_CHIP_SELECTOR" value="2" />
+        <ctl name="stereo Profile" value="speaker" />
+        <ctl name="TFA_CHECK_FEEDBACK" value="On" />
     </path>
 
     <path name="voice-speaker-2-vbat">
-        <path name="speaker-vbat-mono-2" />
+        <ctl name="TFA_CHIP_SELECTOR" value="2" />
+        <ctl name="stereo Profile" value="speaker" />
+        <ctl name="TFA_CHECK_FEEDBACK" value="On" />
     </path>
 
     <path name="voice-speaker-stereo-vbat">
-        <path name="speaker-vbat" />
+        <ctl name="TFA_CHIP_SELECTOR" value="2" />
+        <ctl name="stereo Profile" value="speaker" />
+        <ctl name="TFA_CHECK_FEEDBACK" value="On" />
     </path>
 
     <path name="voice-speaker-mic">
@@ -4417,18 +4441,22 @@
         <ctl name="USB_AUDIO_RX Audio Mixer MultiMedia2" value="1" />
     </path>
     <path name="hifi-playback">
+        <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia2" value="0" />
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia2" value="1" />
     </path>
 
     <path name="hifi-playback speaker">
+        <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia2" value="0" />
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia2" value="1" />
     </path>
 
     <path name="hifi-playback handset">
+        <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia2" value="0" />
         <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia2" value="1" />
     </path>
 
     <path name="hifi-playback bt-a2dp">
+        <ctl name="TERT_MI2S_RX Audio Mixer MultiMedia2" value="0" />
         <ctl name="SLIMBUS_7_RX Audio Mixer MultiMedia2" value="1" />
     </path>
     <path name="hifi-record">
