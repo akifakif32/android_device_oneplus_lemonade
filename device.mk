@@ -93,5 +93,9 @@ $(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 
 $(call inherit-product, device/oneplus/sm8350-common/common.mk)
 
+# Patched odm camera configs from the camera repo. Must come before the vendor
+# makefile: the first PRODUCT_COPY_FILES entry for a destination wins.
+$(call inherit-product-if-exists, vendor/oplus/camera/devices/lemonade.mk)
+
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/lemonade/lemonade-vendor.mk)
