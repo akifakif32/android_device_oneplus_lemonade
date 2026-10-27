@@ -103,6 +103,10 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/libnfc-nxp.conf': blob_fixup()
         .regex_replace('(NXPLOG_.*_LOGLEVEL)=0x03', '\\1=0x02')
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
+    'vendor/lib64/hw/camera.qcom.so': blob_fixup()
+        .sig_replace('70 01 15 0B 1F 12 00 71 C8 00 00 54 35 00 80 52 60 02 80 52', '70 01 15 0B 1F 2E 00 71 C8 00 00 54 35 00 80 52 60 02 81 52'),
+    'vendor/lib64/hw/com.qti.chi.override.so': blob_fixup()
+        .sig_replace('47 18 A1 52 A7 21 00 B9', '47 18 A1 52 1F 20 03 D5'),
     'vendor/lib64/libmidasserviceintf_aidl.so': blob_fixup()
         .remove_needed('android.frameworks.stats@1.0.so'),
     'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so': blob_fixup()
