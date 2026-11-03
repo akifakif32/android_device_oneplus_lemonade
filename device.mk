@@ -91,6 +91,11 @@ TARGET_DOZE_DOUBLE_TAP_PULSE_SUPPORTED := true
 $(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
 $(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 
+# Shows the "Disable Bluetooth LE Audio" developer option. ro.bluetooth.leaudio_switcher.*
+# has no property_contexts entry (default_prop), so vendor_init can't set it from vendor.prop.
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.bluetooth.leaudio_switcher.supported=true
+
 $(call inherit-product, device/oneplus/sm8350-common/common.mk)
 
 # Patched odm camera configs from the camera repo. Must come before the vendor
